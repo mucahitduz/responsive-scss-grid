@@ -1,0 +1,311 @@
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+}
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+}
+header {
+  background-color: #2e323f;
+  padding: 0.5em 0;
+}
+.container {
+  max-width: 75rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.nav {
+  align-items: center;
+
+  &__list {
+    margin-left: auto;
+
+    .nav__item {
+      & + .nav__item {
+        margin-left: 2rem;
+      }
+
+      .nav__link {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      .nav__link--button {
+        padding: 0.2em 0.7em;
+        border-radius: 6.25rem;
+        background-color: #a59678;
+      }
+    }
+
+    .title__nav {
+      font-size: 1.125rem;
+      list-style-type: none;
+    }
+  }
+}
+
+.section-1 {
+  background-color: #3b4050;
+  padding: 5em 0;
+}
+.title__main {
+  color: #ffffff;
+  font-size: 5.625rem;
+  margin-bottom: 1rem;
+}
+.title__gold {
+  color: #a59678;
+}
+
+.text__main {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+.title__button {
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: #a59678;
+  color: #ffffff;
+  border-radius: 6.25rem;
+  padding: 0.15em 0.5em;
+  text-transform: uppercase;
+}
+.section-2 {
+  background-color: #e1e1e2;
+  padding: 5em 0;
+}
+.col {
+  text-align: center;
+  & + .col {
+    margin-top: 1.5rem;
+    margin-top: 0;
+    line-height: 1.7rem;
+  }
+  .title__md {
+    margin-bottom: 1.5rem;
+  }
+}
+.title__md {
+  font-size: 1.875rem;
+}
+.section-3 {
+  padding: 5em 0;
+}
+.title__lg {
+  font-size: 2.25rem;
+}
+.image {
+  margin-bottom: 3rem;
+}
+
+.col-3 {
+  background-color: #3b4050;
+  color: #ffffff;
+  padding: 3em 2.5em;
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  & + .col-3 {
+    margin-top: 2rem;
+  }
+}
+.text__md {
+  font-size: 1.125rem;
+}
+.section-4 {
+  background-color: #2e323f;
+  color: #ffffff;
+  padding: 5em 0;
+}
+.title__footer {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.125rem;
+}
+.title__sm {
+  font-size: 1.3125rem;
+  margin-bottom: 1rem;
+}
+.text__sm {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+@media (1000px 		<= width) {
+  .row {
+    display: flex;
+    gap: 1.875rem;
+    align-items: center;
+  }
+  .row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1.875rem;
+    align-items: center;
+  }
+  .row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1.875rem;
+    align-items: center;
+  }
+  .row-footer {
+    display: grid;
+    gap: 1.875rem;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+.col-bg {
+  width: 100%;
+
+  .text__lg {
+    font-size: 1.3125rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.col-sm {
+  width: 50%;
+  margin: 0 auto;
+}
+.footer {
+  text-align: left;
+}
+
+.footer-col {
+  grid-column: span 5 / span 5;
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .title__main {
+    font-size: 5rem;
+  }
+
+  .text__main {
+    font-size: 1.25rem;
+  }
+
+  .title__button {
+    font-size: 1.125rem;
+  }
+
+  .title__md {
+    font-size: 1.75rem;
+  }
+
+  .title__lg {
+    font-size: 2rem;
+  }
+
+  .title__footer {
+    font-size: 2.5rem;
+  }
+
+  .title__sm {
+    font-size: 1.25rem;
+  }
+
+  .text__sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
+
+  .title__main {
+    font-size: 4rem;
+  }
+
+  .text__main {
+    font-size: 1rem;
+  }
+
+  .title__button {
+    font-size: 1rem;
+  }
+
+  .title__md {
+    font-size: 1.5rem;
+  }
+
+  .title__lg {
+    font-size: 1.875rem;
+  }
+
+  .title__footer {
+    font-size: 2rem;
+  }
+
+  .title__sm {
+    font-size: 1.125rem;
+  }
+
+  .text__sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
+
+  .title__main {
+    font-size: 3.5rem;
+  }
+
+  .text__main {
+    font-size: 0.875rem;
+  }
+
+  .title__button {
+    font-size: 1rem;
+  }
+
+  .title__md {
+    font-size: 1.25rem;
+  }
+
+  .title__lg {
+    font-size: 1.5rem;
+  }
+
+  .title__footer {
+    font-size: 1.75rem;
+  }
+
+  .title__sm {
+    font-size: 1rem;
+  }
+
+  .text__sm {
+    font-size: 0.75rem;
+  }
+}
