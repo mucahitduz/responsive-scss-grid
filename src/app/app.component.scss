@@ -1,14 +1,42 @@
+@mixin font-settings($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+@mixin background($color, $padding) {
+  background-color: $color;
+  @include padding($padding);
+}
+
+@function border-radius($value) {
+  @return $value * 2;
+}
+
+$font-primary: "Oswald", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
+$font-size-base: 1rem;
+$font-size-lg: 2.25rem;
+$font-size-md: 1.875rem;
+$font-size-sm: 1.3125rem;
+$color-dark: #2e323f;
+$color-light: #ffffff;
+$color-accent: #a59678;
+$color-background-dark: #3b4050;
+$color-background-light: #e1e1e2;
+$border-radius: 3.125rem;
+
 .title {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.5rem;
+  @include font-settings($font-primary, 1.5rem);
 }
 .text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
+  @include font-settings($font-secondary, 1.125rem);
 }
 header {
-  background-color: #2e323f;
-  padding: 0.5em 0;
+  @include background($color-dark, 0.5em 0);
 }
 .container {
   max-width: 75rem;
@@ -31,12 +59,12 @@ header {
 
       .nav__link {
         text-decoration: none;
-        color: #ffffff;
+        color: $color-light;
       }
       .nav__link--button {
         padding: 0.2em 0.7em;
-        border-radius: 6.25rem;
-        background-color: #a59678;
+        border-radius: border-radius($border-radius);
+        background-color: $color-accent;
       }
     }
 
@@ -48,35 +76,33 @@ header {
 }
 
 .section-1 {
-  background-color: #3b4050;
-  padding: 5em 0;
+  @include background($color-background-dark, 5em 0);
 }
 .title__main {
-  color: #ffffff;
+  color: $color-light;
   font-size: 5.625rem;
   margin-bottom: 1rem;
 }
 .title__gold {
-  color: #a59678;
+  color: $color-accent;
 }
 
 .text__main {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: $color-light;
 }
 .title__button {
   text-decoration: none;
   font-size: 1.5rem;
-  background-color: #a59678;
-  color: #ffffff;
-  border-radius: 6.25rem;
+  background-color: $color-accent;
+  color: $color-light;
+  border-radius: border-radius($border-radius);
   padding: 0.15em 0.5em;
   text-transform: uppercase;
 }
 .section-2 {
-  background-color: #e1e1e2;
-  padding: 5em 0;
+  @include background($color-background-light, 5em 0);
 }
 .col {
   text-align: center;
@@ -90,21 +116,21 @@ header {
   }
 }
 .title__md {
-  font-size: 1.875rem;
+  font-size: $font-size-md;
 }
 .section-3 {
-  padding: 5em 0;
+  @include background($color-light, 5em 0);
 }
 .title__lg {
-  font-size: 2.25rem;
+  font-size: $font-size-lg;
 }
 .image {
   margin-bottom: 3rem;
 }
 
 .col-3 {
-  background-color: #3b4050;
-  color: #ffffff;
+  background-color: $color-background-dark;
+  color: $color-light;
   padding: 3em 2.5em;
   .title {
     margin-bottom: 1.5rem;
@@ -117,9 +143,8 @@ header {
   font-size: 1.125rem;
 }
 .section-4 {
-  background-color: #2e323f;
-  color: #ffffff;
-  padding: 5em 0;
+  @include background($color-dark, 5em 0);
+  color: $color-light;
 }
 .title__footer {
   text-align: center;
@@ -127,11 +152,11 @@ header {
   font-size: 3.125rem;
 }
 .title__sm {
-  font-size: 1.3125rem;
+  font-size: $font-size-sm;
   margin-bottom: 1rem;
 }
 .text__sm {
-  font-size: 1rem;
+  font-size: $font-size-base;
   margin-bottom: 1rem;
   opacity: 0.7;
 }
@@ -167,7 +192,7 @@ header {
   width: 100%;
 
   .text__lg {
-    font-size: 1.3125rem;
+    font-size: $font-size-sm;
     margin-bottom: 1.5rem;
   }
 }
@@ -190,7 +215,7 @@ header {
   }
 
   .text {
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 
   .title__main {
@@ -240,11 +265,11 @@ header {
   }
 
   .text__main {
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 
   .title__button {
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 
   .title__md {
@@ -252,7 +277,7 @@ header {
   }
 
   .title__lg {
-    font-size: 1.875rem;
+    font-size: $font-size-md;
   }
 
   .title__footer {
@@ -286,7 +311,7 @@ header {
   }
 
   .title__button {
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 
   .title__md {
@@ -302,7 +327,7 @@ header {
   }
 
   .title__sm {
-    font-size: 1rem;
+    font-size: $font-size-base;
   }
 
   .text__sm {
